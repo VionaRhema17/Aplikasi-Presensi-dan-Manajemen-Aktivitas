@@ -1,0 +1,18 @@
+# ==== ENV & Config (jangan ikut repo) ====
+.env
+*.env.*
+*.sql
+config/db.php   # karena di sini ada user/pass DB
+
+# ==== Build / Distribusi ====
+/dist/
+
+# ==== Uploads / Assets yang di-generate ====
+/uploads/
+*.log
+
+# ==== Editor & OS ====
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
