@@ -1,0 +1,17 @@
+name: GitHub to Discord
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send commit message to Discord
+        run: |
+          curl -H "Content-Type: application/json" \
+          -X POST \
+          -d "{\"content\": \"Push detected on $GITHUB_REPOSITORY by $GITHUB_ACTOR: $GITHUB_SHA\"}" \
+          ${{ secrets.DISCORD_WEBHOOK }}
