@@ -2,7 +2,7 @@
 .env
 *.env.*
 *.sql
-config/db.php   # karena di sini ada user/pass DB
+/config/db.php   # karena di sini ada user/pass DB
 
 # ==== Build / Distribusi ====
 /dist/
