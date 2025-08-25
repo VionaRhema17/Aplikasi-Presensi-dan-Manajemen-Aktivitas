@@ -1,8 +1,13 @@
-# ==== ENV & Config (jangan ikut repo) ====
+# Abaikan hanya folder config di root (bukan src/config)
+ /config/
+
+# Abaikan file sensitif umum
 .env
-*.env.*
+*.env
 *.sql
-/config/db.php   # karena di sini ada user/pass DB
+*.sqlite
+*.db
+*.bak
 
 # ==== Build / Distribusi ====
 /dist/
