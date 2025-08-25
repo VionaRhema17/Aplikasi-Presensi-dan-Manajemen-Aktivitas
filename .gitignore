@@ -1,23 +1,44 @@
-# Abaikan hanya folder config di root (bukan src/config)
- /config/
+# =========================================
+# PHP / Laragon Project .gitignore
+# =========================================
 
-# Abaikan file sensitif umum
+# Jangan upload file environment / database
 .env
-*.env
-*.sql
-*.sqlite
-*.db
-*.bak
+.env.*
+config/db.php
 
-# ==== Build / Distribusi ====
-/dist/
-
-# ==== Uploads / Assets yang di-generate ====
-/uploads/
-*.log
-
-# ==== Editor & OS ====
+# Jangan upload file konfigurasi IDE/editor
 .vscode/
 .idea/
+
+# Jangan upload file sistem OS
 .DS_Store
 Thumbs.db
+
+# Jangan upload cache, log, dan temporary files
+*.log
+*.tmp
+*.cache
+*.bak
+*.swp
+*.swo
+
+# Composer dependencies
+/vendor/
+
+# Node.js dependencies (kalau pakai frontend build)
+node_modules/
+
+# Build outputs / dist
+dist/
+build/
+out/
+
+# PHP built-in cache
+*.phpunit.result.cache
+.phpunit.cache/
+composer.lock
+
+# =========================================
+# END
+# =========================================
